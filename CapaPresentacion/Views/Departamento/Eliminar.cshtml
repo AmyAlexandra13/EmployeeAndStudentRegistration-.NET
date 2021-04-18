@@ -1,0 +1,49 @@
+﻿@model CapaEntidad.Departamento
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2 class="bg-danger">Eliminar departamento</h2>
+
+
+<div>
+    <h4>Departamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdDpt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDpt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Siglas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Siglas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Eliminar","Departamento",FormMethod.Post)) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+    @Html.ActionLink("Volver atras", "Departamento", new { area = "" }, new { @class = "btn btn-primary" })
+</div>
+    }
+</div>

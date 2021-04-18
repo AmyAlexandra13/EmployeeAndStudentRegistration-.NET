@@ -1,0 +1,71 @@
+﻿@model IEnumerable<CapaEntidad.Usuario>
+
+@{
+    ViewBag.Title = "Empleados";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2>Empleados</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo empleado", "Crear", "Empleados",new { @class = "btn btn-success" })
+</p>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDepartamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Id)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nombre)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Apellido)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Correo)
+    </td>
+    <td>
+
+        @Html.DisplayFor(modelItem => item.Contra)
+    </td>
+    <td>
+
+        @Html.DisplayFor(modelItem => item.IdDepartamento)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Cargo)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Editar", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+        @Html.ActionLink("Eliminar", "Eliminar", new { id = item.Id }, new { @class = "btn btn-danger" })
+    </td>
+</tr>
+    }
+
+    </table>

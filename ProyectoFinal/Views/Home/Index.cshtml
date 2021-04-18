@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!-- <link type="text/css" href="~/Content/bootstrap-theme.min.css" rel="stylesheet">
+     <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+     <script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js"></script> --->
+
+</head>
+<body>
+    <div class="col-md-6">
+        <form action="Verify" method="post">
+            <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Ingrese al sistema</h1>
+
+            <div class="form-floating">
+                <label for="idlogin">ID del usuario</label>
+                <input type="text" class="form-control" id="idlogin" placeholder="ID de su usuario">
+
+            </div>
+            <div class="form-floating">
+                <label for="contralogin">Ingrese su contraseña</label>
+                <input type="password" class="form-control" id="contralogin" placeholder="Password">
+
+            </div>
+
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Ingresar al sistema</button>
+
+            <p class="mt-5 mb-3 text-muted">© 2017–2021 Amy's work.</p>
+        </form>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+   
+
+</body>
+</html>

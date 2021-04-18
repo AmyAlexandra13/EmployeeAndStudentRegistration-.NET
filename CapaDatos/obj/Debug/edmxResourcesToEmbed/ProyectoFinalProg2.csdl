@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProyectoFinalProg2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="IdDocumento" />
+    </Key>
+    <Property Name="IdDocumento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdUser" Type="Int32" />
+    <Property Name="TipoDocumento" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DptoOrigen" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DptoDestino" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="0" />
+    <Property Name="Secuencia" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="ProyectoFinalProg2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Documentoes" EntityType="Self.Documento" />
+    <EntitySet Name="Departamentoes" EntityType="ProyectoFinalProg2Model.Departamento" />
+    <EntitySet Name="Usuarios" EntityType="ProyectoFinalProg2Model.Usuario" />
+  </EntityContainer>
+  <EntityType Name="Departamento">
+    <Key>
+      <PropertyRef Name="IdDpt" />
+    </Key>
+    <Property Name="IdDpt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Siglas" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="Correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Contra" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="IdDepartamento" Type="Int32" />
+    <Property Name="Cargo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
