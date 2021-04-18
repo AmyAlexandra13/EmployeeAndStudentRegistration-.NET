@@ -1,0 +1,77 @@
+﻿@model CapaEntidad.Usuario
+
+@{
+    ViewBag.Title = "VerUsuarios";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2 class="btn-success text-center text-info">Ver usuarios</h2>
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+
+        <dt>
+                Contraseña
+            <!---  @Html.DisplayNameFor(model => model.Contra)-->
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Contra)
+    </dd>
+
+    <dt>
+        Id del departamento que pertenece
+        <!---@Html.DisplayNameFor(model => model.IdDepartamento)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDepartamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Volver atras", "ReporteUsuario", new { area = "" }, new { @class = "btn btn-primary" })
+</p>

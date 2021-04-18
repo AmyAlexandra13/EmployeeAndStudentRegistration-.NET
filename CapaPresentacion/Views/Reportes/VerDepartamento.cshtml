@@ -1,0 +1,45 @@
+﻿@model CapaEntidad.Departamento
+
+@{
+    ViewBag.Title = "VerDepartamento";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2 class="btn-info text-center">Ver departamento</h2>
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Id
+           <!--- @Html.DisplayNameFor(model => model.IdDpt) -->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdDpt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Siglas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Siglas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+
+    @Html.ActionLink("Volver atras", "ReporteDepartamento", new { area = "" }, new { @class = "btn btn-primary" })
+
+</p>

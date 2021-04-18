@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Reportes";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2></h2>
+
+<div class="jumbotron btn-info">
+    <h1 class="btn-info text-center">Bienvenido a reportes</h1>
+   
+
+
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <h2>Reporte de todos los usuarios</h2>
+            <p>
+                Puedes ver los usuarios que has creados, de tal manera que accedes a todos sus detalles.
+            </p>
+
+            <p>  @Html.ActionLink("Ir ahora >>", "ReporteUsuario", new { area = "" }, new { @class = "btn btn-primary" })</p>
+           
+        </div>
+
+        <div class="col-md-4">
+            <h2>Reporte de departamentos</h2>
+            <p>
+                Puedes ver los departamentos que has creado, de tal manera que accedes a todos sus detalles.
+            </p>
+
+            <p>  @Html.ActionLink("Ir ahora >>", "ReporteDepartamento", new { area = "" }, new { @class = "btn btn-primary" })</p>
+
+        </div>
+
+        <div class="col-md-4">
+            <h2>Reporte de documentos</h2>
+            <p>
+                Puedes ver los documentos que has creado, de tal manera que accedes a todos sus detalles.
+            </p>
+            <p><a class="btn btn-primary" href="https://go.microsoft.com/fwlink/?LinkId=301867">Ir ahora &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
