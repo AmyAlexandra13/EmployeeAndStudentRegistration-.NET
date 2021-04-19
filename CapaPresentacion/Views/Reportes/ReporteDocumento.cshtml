@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CapaEntidad.Documento>
+
+@{
+    ViewBag.Title = "ReporteDocumento";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2 class="bg-primary text-info text-center">Reporte de todos los documentos</h2>
+
+<p class="bg-success text-center">
+    @Html.ActionLink("Filtrar por empleado", "FiltroEmpleado", "Filtros", new { @class = "btn btn-info" })
+    @Html.ActionLink("Filtrar por departamento origen", "FiltroEmpleado", "Filtros", new { @class = "btn btn-info" })
+    @Html.ActionLink("Filtrar por departamento destino", "FiltroEmpleado", "Filtros", new { @class = "btn btn-info" })
+    @Html.ActionLink("Filtrar por rango de fecha", "FiltroEmpleado", "Filtros", new { @class = "btn btn-info" })
+</p>
+<table class="table table-hover table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DptoOrigen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DptoDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secuencia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DptoOrigen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DptoDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Secuencia)
+        </td>
+      
+    </tr>
+}
+
+</table>
+
+<p>
+
+    @Html.ActionLink("Volver atras", "Reportes", new { area = "" }, new { @class = "btn btn-primary" })
+
+</p>

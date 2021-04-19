@@ -40,6 +40,14 @@ namespace CapaPresentacion.Controllers
             return View(dptos);
         }
 
+       public ActionResult ReporteDocumento()
+        {
+    
+            var docs = DocumentoCN.ListarDocumentos();
+            return View(docs);
+        }
+
+
 
     }
 }
