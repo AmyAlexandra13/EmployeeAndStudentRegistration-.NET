@@ -13,7 +13,8 @@ namespace CapaDatos
         {
             using (var db = new ProyectoFinalProg2Entities())
             {
-                return db.Usuarios.ToList();
+                return db.Usuarios.ToList();;
+                ///return db.Usuarios.ToList();
             }
         }
 

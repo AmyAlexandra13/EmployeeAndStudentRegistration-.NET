@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CapaEntidad.Documento>
+
+@{
+    ViewBag.Title = "Documentos";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2 class="text-info">Documentos</h2>
+
+<p>
+    @Html.ActionLink("Crear documento", "CrearDocumento","Documentos", new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DptoOrigen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DptoDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secuencia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DptoOrigen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DptoDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Secuencia)
+        </td>
+        <!--<td>-->
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        <!--</td>-->
+    </tr>
+}
+
+</table>

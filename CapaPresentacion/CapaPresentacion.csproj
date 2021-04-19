@@ -130,6 +130,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DepartamentoController.cs" />
+    <Compile Include="Controllers\DocumentosController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ReportesController.cs" />
@@ -231,6 +232,8 @@
     <Content Include="Views\Reportes\VerUsuarios.cshtml" />
     <Content Include="Views\Reportes\ReporteDepartamento.cshtml" />
     <Content Include="Views\Reportes\VerDepartamento.cshtml" />
+    <Content Include="Views\Documentos\Documentos.cshtml" />
+    <Content Include="Views\Documentos\CrearDocumento.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

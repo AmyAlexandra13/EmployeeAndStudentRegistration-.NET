@@ -39,5 +39,7 @@ namespace CapaPresentacion.Controllers
             var dptos = DepartamentoCN.GetDepartamento(id);
             return View(dptos);
         }
+
+
     }
 }

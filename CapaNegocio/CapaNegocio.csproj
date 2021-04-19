@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DepartamentoCN.cs" />
+    <Compile Include="DocumentoCN.cs" />
     <Compile Include="EmpleadoCN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
