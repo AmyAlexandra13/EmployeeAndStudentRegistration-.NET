@@ -9,11 +9,13 @@
 
 namespace CapaDatos
 {
-    using CapaEntidad;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
+    using CapaEntidad;
+
     public partial class ProyectoFinalProg2Entities : DbContext
     {
         public ProyectoFinalProg2Entities()
@@ -29,5 +31,14 @@ namespace CapaDatos
         public virtual DbSet<Documento> Documentoes { get; set; }
         public virtual DbSet<Departamento> Departamentoes { get; set; }
         public virtual DbSet<Usuario> Usuarios { get; set; }
+    
+        public virtual ObjectResult<FiltroDptoOrigen_Result> FiltroDptoOrigen(string dpto)
+        {
+            var dptoParameter = dpto != null ?
+                new ObjectParameter("dpto", dpto) :
+                new ObjectParameter("dpto", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FiltroDptoOrigen_Result>("FiltroDptoOrigen", dptoParameter);
+        }
     }
 }

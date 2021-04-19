@@ -16,6 +16,9 @@
     <EntitySet Name="Documentoes" EntityType="Self.Documento" />
     <EntitySet Name="Departamentoes" EntityType="ProyectoFinalProg2Model.Departamento" />
     <EntitySet Name="Usuarios" EntityType="ProyectoFinalProg2Model.Usuario" />
+    <FunctionImport Name="FiltroDptoOrigen" ReturnType="Collection(ProyectoFinalProg2Model.FiltroDptoOrigen_Result)">
+      <Parameter Name="dpto" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Departamento">
     <Key>
@@ -37,4 +40,13 @@
     <Property Name="IdDepartamento" Type="Int32" />
     <Property Name="Cargo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
   </EntityType>
+  <ComplexType Name="FiltroDptoOrigen_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="IdUser" Nullable="true" />
+    <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+    <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+  </ComplexType>
 </Schema>

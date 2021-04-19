@@ -32,6 +32,9 @@
     <Property Name="IdDepartamento" Type="int" />
     <Property Name="Cargo" Type="varchar" MaxLength="40" />
   </EntityType>
+  <Function Name="FiltroDptoOrigen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dpto" Type="varchar" Mode="In" />
+  </Function>
   <EntityContainer Name="ProyectoFinalProg2ModelStoreContainer">
     <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Documento" EntityType="Self.Documento" Schema="dbo" store:Type="Tables" />

@@ -17,6 +17,5 @@ namespace CapaEntidad
         public int IdDpt { get; set; }
         public string Nombre { get; set; }
         public string Siglas { get; set; }
-  
     }
 }

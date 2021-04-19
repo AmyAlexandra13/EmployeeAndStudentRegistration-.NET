@@ -36,5 +36,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="FiltroDptoOrigen" FunctionName="ProyectoFinalProg2Model.Store.FiltroDptoOrigen">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroDptoOrigen_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+          <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

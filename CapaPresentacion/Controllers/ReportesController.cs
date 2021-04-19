@@ -1,4 +1,5 @@
 ﻿using CapaNegocio;
+using CapaServicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace CapaPresentacion.Controllers
 {
     public class ReportesController : Controller
     {
+        FiltroServicios servicio = new FiltroServicios();
         // GET: Reportes
         public ActionResult Reportes()
         {
@@ -47,6 +49,30 @@ namespace CapaPresentacion.Controllers
             return View(docs);
         }
 
+        public ActionResult FiltroDPTOrigen()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FiltroOrigenResultado(string dptoorigen)
+        {
+
+            return View(servicio.BuscaDptoOrigen(dptoorigen));
+        }
+
+
+       public ActionResult FiltroEmpleado()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FiltroEmpleadoResultado(int id)
+        {
+            return View();
+            return View(servicio.BuscaDptoOrigen(id));
+        }
 
 
     }

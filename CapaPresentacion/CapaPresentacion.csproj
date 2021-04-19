@@ -236,10 +236,12 @@
     <Content Include="Views\Documentos\Documentos.cshtml" />
     <Content Include="Views\Documentos\CrearDocumento.cshtml" />
     <Content Include="Views\Reportes\ReporteDocumento.cshtml" />
+    <Content Include="Views\Reportes\FiltroDPTOrigen.cshtml" />
+    <Content Include="Views\Reportes\FiltroOrigenResultado.cshtml" />
+    <Content Include="Views\Reportes\FiltroEmpleado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Filtros\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -269,6 +271,10 @@
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{48fd4a51-5a5d-4704-8a3e-edbb7a228bd1}</Project>
       <Name>CapaNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaServicios\CapaServicios.csproj">
+      <Project>{f195d990-6e1e-47b2-84e9-767fb935f921}</Project>
+      <Name>CapaServicios</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

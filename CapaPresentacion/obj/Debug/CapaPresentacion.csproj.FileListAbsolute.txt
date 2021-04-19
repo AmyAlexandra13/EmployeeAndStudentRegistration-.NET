@@ -97,3 +97,6 @@ C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\obj\Debug\CapaPrese
 C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\bin\CapaDatos.dll
 C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\bin\CapaDatos.pdb
 C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\bin\CapaDatos.dll.config
+C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\bin\CapaServicios.dll
+C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\bin\CapaServicios.pdb
+C:\Users\Candida\source\repos\ProyectoFinal\CapaPresentacion\bin\CapaServicios.dll.config

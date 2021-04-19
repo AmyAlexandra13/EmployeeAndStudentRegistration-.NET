@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "FiltroDPTOrigen";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+
+<h2 class="text-center btn-warning">Filtrar por departamento Origen</h2>
+<form action="/Reportes/FiltroOrigenResultado" method="post">
+    <input type="text" name="dptoorigen" placeholder="Ingrese el departamento origen" class="form-control" />
+    <input type="submit" value="Buscar" class="btn btn-success" />
+</form>
