@@ -239,6 +239,7 @@
     <Content Include="Views\Reportes\FiltroDPTOrigen.cshtml" />
     <Content Include="Views\Reportes\FiltroOrigenResultado.cshtml" />
     <Content Include="Views\Reportes\FiltroEmpleado.cshtml" />
+    <Content Include="Views\Reportes\FiltroEmpleadoResultado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

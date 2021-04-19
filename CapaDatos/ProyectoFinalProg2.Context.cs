@@ -40,5 +40,36 @@ namespace CapaDatos
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FiltroDptoOrigen_Result>("FiltroDptoOrigen", dptoParameter);
         }
+    
+        public virtual ObjectResult<FiltroDptoDestino_Result> FiltroDptoDestino(string dptodestino)
+        {
+            var dptodestinoParameter = dptodestino != null ?
+                new ObjectParameter("dptodestino", dptodestino) :
+                new ObjectParameter("dptodestino", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FiltroDptoDestino_Result>("FiltroDptoDestino", dptodestinoParameter);
+        }
+    
+        public virtual ObjectResult<FiltroFecha_Result> FiltroFecha(Nullable<System.DateTime> dateincio, Nullable<System.DateTime> datefin)
+        {
+            var dateincioParameter = dateincio.HasValue ?
+                new ObjectParameter("dateincio", dateincio) :
+                new ObjectParameter("dateincio", typeof(System.DateTime));
+    
+            var datefinParameter = datefin.HasValue ?
+                new ObjectParameter("datefin", datefin) :
+                new ObjectParameter("datefin", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FiltroFecha_Result>("FiltroFecha", dateincioParameter, datefinParameter);
+        }
+    
+        public virtual ObjectResult<FiltroIDEmpleado_Result> FiltroIDEmpleado(Nullable<int> id)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FiltroIDEmpleado_Result>("FiltroIDEmpleado", idParameter);
+        }
     }
 }

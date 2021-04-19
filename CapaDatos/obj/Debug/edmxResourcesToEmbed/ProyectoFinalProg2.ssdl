@@ -32,8 +32,18 @@
     <Property Name="IdDepartamento" Type="int" />
     <Property Name="Cargo" Type="varchar" MaxLength="40" />
   </EntityType>
+  <Function Name="FiltroDptoDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dptodestino" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="FiltroDptoOrigen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="dpto" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="FiltroFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dateincio" Type="date" Mode="In" />
+    <Parameter Name="datefin" Type="date" Mode="In" />
+  </Function>
+  <Function Name="FiltroIDEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
   </Function>
   <EntityContainer Name="ProyectoFinalProg2ModelStoreContainer">
     <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />

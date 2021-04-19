@@ -49,5 +49,44 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FiltroDptoDestino" FunctionName="ProyectoFinalProg2Model.Store.FiltroDptoDestino">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroDptoDestino_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+          <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FiltroFecha" FunctionName="ProyectoFinalProg2Model.Store.FiltroFecha">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroFecha_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+          <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="FiltroIDEmpleado" FunctionName="ProyectoFinalProg2Model.Store.FiltroIDEmpleado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroIDEmpleado_Result">
+          <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+          <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+          <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -37,8 +37,18 @@
           <Property Name="IdDepartamento" Type="int" />
           <Property Name="Cargo" Type="varchar" MaxLength="40" />
         </EntityType>
+        <Function Name="FiltroDptoDestino" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dptodestino" Type="varchar" Mode="In" />
+        </Function>
         <Function Name="FiltroDptoOrigen" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="dpto" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="FiltroFecha" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateincio" Type="date" Mode="In" />
+          <Parameter Name="datefin" Type="date" Mode="In" />
+        </Function>
+        <Function Name="FiltroIDEmpleado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
         </Function>
         <EntityContainer Name="ProyectoFinalProg2ModelStoreContainer">
           <EntitySet Name="Departamento" EntityType="Self.Departamento" Schema="dbo" store:Type="Tables" />
@@ -66,7 +76,17 @@
           <EntitySet Name="Departamentoes" EntityType="ProyectoFinalProg2Model.Departamento" />
           <EntitySet Name="Usuarios" EntityType="ProyectoFinalProg2Model.Usuario" />
           <FunctionImport Name="FiltroDptoOrigen" ReturnType="Collection(ProyectoFinalProg2Model.FiltroDptoOrigen_Result)">
-            <Parameter Name="dpto" Mode="In" Type="String" />
+          <Parameter Name="dpto" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="FiltroDptoDestino" ReturnType="Collection(ProyectoFinalProg2Model.FiltroDptoDestino_Result)">
+            <Parameter Name="dptodestino" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="FiltroFecha" ReturnType="Collection(ProyectoFinalProg2Model.FiltroFecha_Result)">
+            <Parameter Name="dateincio" Mode="In" Type="DateTime" />
+            <Parameter Name="datefin" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="FiltroIDEmpleado" ReturnType="Collection(ProyectoFinalProg2Model.FiltroIDEmpleado_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="Departamento">
@@ -90,6 +110,33 @@
           <Property Name="Cargo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
         </EntityType>
         <ComplexType Name="FiltroDptoOrigen_Result">
+          <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+          <Property Type="Int32" Name="IdUser" Nullable="true" />
+          <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" />
+          <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="FiltroDptoDestino_Result">
+          <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+          <Property Type="Int32" Name="IdUser" Nullable="true" />
+          <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" />
+          <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="FiltroFecha_Result">
+          <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+          <Property Type="Int32" Name="IdUser" Nullable="true" />
+          <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+          <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+          <Property Type="DateTime" Name="Fecha" Nullable="true" />
+          <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="FiltroIDEmpleado_Result">
           <Property Type="Int32" Name="IdDocumento" Nullable="false" />
           <Property Type="Int32" Name="IdUser" Nullable="true" />
           <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
@@ -142,6 +189,45 @@
           <FunctionImportMapping FunctionImportName="FiltroDptoOrigen" FunctionName="ProyectoFinalProg2Model.Store.FiltroDptoOrigen">
             <ResultMapping>
               <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroDptoOrigen_Result">
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+                <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FiltroDptoDestino" FunctionName="ProyectoFinalProg2Model.Store.FiltroDptoDestino">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroDptoDestino_Result">
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+                <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FiltroFecha" FunctionName="ProyectoFinalProg2Model.Store.FiltroFecha">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroFecha_Result">
+                <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />
+                <ScalarProperty Name="DptoOrigen" ColumnName="DptoOrigen" />
+                <ScalarProperty Name="DptoDestino" ColumnName="DptoDestino" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Secuencia" ColumnName="Secuencia" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="FiltroIDEmpleado" FunctionName="ProyectoFinalProg2Model.Store.FiltroIDEmpleado">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProyectoFinalProg2Model.FiltroIDEmpleado_Result">
                 <ScalarProperty Name="IdDocumento" ColumnName="IdDocumento" />
                 <ScalarProperty Name="IdUser" ColumnName="IdUser" />
                 <ScalarProperty Name="TipoDocumento" ColumnName="TipoDocumento" />

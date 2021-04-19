@@ -17,7 +17,10 @@ namespace CapaServicios
         return db.FiltroDptoOrigen(dptorigen).ToList();
     }
 
-
+        public IList<FiltroIDEmpleado_Result> BuscarIDEmp(int id)
+        {
+            return db.FiltroIDEmpleado(id).ToList();
+        }
 
 
     }

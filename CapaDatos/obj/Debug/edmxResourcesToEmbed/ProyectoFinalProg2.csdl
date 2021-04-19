@@ -19,6 +19,16 @@
     <FunctionImport Name="FiltroDptoOrigen" ReturnType="Collection(ProyectoFinalProg2Model.FiltroDptoOrigen_Result)">
       <Parameter Name="dpto" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="FiltroDptoDestino" ReturnType="Collection(ProyectoFinalProg2Model.FiltroDptoDestino_Result)">
+      <Parameter Name="dptodestino" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="FiltroFecha" ReturnType="Collection(ProyectoFinalProg2Model.FiltroFecha_Result)">
+      <Parameter Name="dateincio" Mode="In" Type="DateTime" />
+      <Parameter Name="datefin" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="FiltroIDEmpleado" ReturnType="Collection(ProyectoFinalProg2Model.FiltroIDEmpleado_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="Departamento">
     <Key>
@@ -41,6 +51,33 @@
     <Property Name="Cargo" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
   </EntityType>
   <ComplexType Name="FiltroDptoOrigen_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="IdUser" Nullable="true" />
+    <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+    <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="FiltroDptoDestino_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="IdUser" Nullable="true" />
+    <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+    <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="FiltroFecha_Result">
+    <Property Type="Int32" Name="IdDocumento" Nullable="false" />
+    <Property Type="Int32" Name="IdUser" Nullable="true" />
+    <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoOrigen" Nullable="true" MaxLength="30" />
+    <Property Type="String" Name="DptoDestino" Nullable="true" MaxLength="30" />
+    <Property Type="DateTime" Name="Fecha" Nullable="true" />
+    <Property Type="String" Name="Secuencia" Nullable="true" MaxLength="30" />
+  </ComplexType>
+  <ComplexType Name="FiltroIDEmpleado_Result">
     <Property Type="Int32" Name="IdDocumento" Nullable="false" />
     <Property Type="Int32" Name="IdUser" Nullable="true" />
     <Property Type="String" Name="TipoDocumento" Nullable="true" MaxLength="30" />

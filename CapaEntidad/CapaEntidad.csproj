@@ -55,7 +55,16 @@
     <Compile Include="Documento.cs">
       <DependentUpon>ProyectoFinalProg2.tt</DependentUpon>
     </Compile>
+    <Compile Include="FiltroDptoDestino_Result.cs">
+      <DependentUpon>ProyectoFinalProg2.tt</DependentUpon>
+    </Compile>
     <Compile Include="FiltroDptoOrigen_Result.cs">
+      <DependentUpon>ProyectoFinalProg2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroFecha_Result.cs">
+      <DependentUpon>ProyectoFinalProg2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FiltroIDEmpleado_Result.cs">
       <DependentUpon>ProyectoFinalProg2.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

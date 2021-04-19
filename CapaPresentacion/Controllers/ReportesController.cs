@@ -70,8 +70,8 @@ namespace CapaPresentacion.Controllers
         [HttpPost]
         public ActionResult FiltroEmpleadoResultado(int id)
         {
-            return View();
-            return View(servicio.BuscaDptoOrigen(id));
+            
+            return View(servicio.BuscarIDEmp(id));
         }
 
 
