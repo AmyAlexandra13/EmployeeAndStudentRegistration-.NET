@@ -240,6 +240,10 @@
     <Content Include="Views\Reportes\FiltroOrigenResultado.cshtml" />
     <Content Include="Views\Reportes\FiltroEmpleado.cshtml" />
     <Content Include="Views\Reportes\FiltroEmpleadoResultado.cshtml" />
+    <Content Include="Views\Reportes\FiltroDPTDestino.cshtml" />
+    <Content Include="Views\Reportes\FiltroDestinoResultado.cshtml" />
+    <Content Include="Views\Reportes\FiltroFecha.cshtml" />
+    <Content Include="Views\Reportes\FiltroFechaResultado.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

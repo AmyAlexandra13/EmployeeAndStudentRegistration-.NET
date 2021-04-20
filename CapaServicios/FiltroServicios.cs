@@ -17,9 +17,19 @@ namespace CapaServicios
         return db.FiltroDptoOrigen(dptorigen).ToList();
     }
 
-        public IList<FiltroIDEmpleado_Result> BuscarIDEmp(int id)
+        public List<FiltroIDEmpleado_Result> BuscarIDEmp(int id)
         {
             return db.FiltroIDEmpleado(id).ToList();
+        }
+
+        public List<FiltroDptoDestino_Result> BuscarDPTdestino(string dptdestino)
+        {
+            return db.FiltroDptoDestino(dptdestino).ToList();
+        }
+
+        public List<FiltroFecha_Result> BuscarFecha(DateTime inicio, DateTime fin)
+        {
+            return db.FiltroFecha(inicio, fin).ToList();
         }
 
 

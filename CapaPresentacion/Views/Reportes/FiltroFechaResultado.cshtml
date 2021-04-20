@@ -1,14 +1,14 @@
-﻿@model IEnumerable<CapaEntidad.FiltroDptoOrigen_Result>
+﻿@model IEnumerable<CapaEntidad.FiltroFecha_Result>
 
 @{
-    ViewBag.Title = "FiltroOrigenResultado";
+    ViewBag.Title = "FiltroFechaResultado";
     Layout = "~/Views/Shared/_MenuLayout.cshtml";
 }
 
-<h2 class="text-center">Filtrando por departamento origen</h2>
+<h2 class="btn-primary">Filtro de fecha</h2>
 
 
-<table class="table table-striped table-hover">
+<table class="table table-hover table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.IdDocumento)
@@ -57,7 +57,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Secuencia)
         </td>
-       
+      
     </tr>
 }
 

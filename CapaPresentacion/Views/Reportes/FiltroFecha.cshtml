@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "FiltroFecha";
+    Layout = "~/Views/Shared/_MenuLayout.cshtml";
+}
+
+<h2 class="btn-primary text-center">Filtrar por fecha</h2>
+<form action="/Reportes/FiltroFechaResultado" method="post">
+
+    <input type="date" name="inicio1" class="form-control" />
+
+    <input type="date" name="fin1" class="form-control" />
+
+    <input type="submit" value="Buscar" class="btn btn-success" />
+</form>
+

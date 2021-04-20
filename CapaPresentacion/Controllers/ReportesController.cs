@@ -75,5 +75,30 @@ namespace CapaPresentacion.Controllers
         }
 
 
+        public ActionResult FiltroDPTDestino()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FiltroDestinoResultado(string dptdestino)
+        {
+            
+            return View(servicio.BuscarDPTdestino(dptdestino));
+        }
+
+
+        public ActionResult FiltroFecha()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult FiltroFechaResultado(DateTime inicio1, DateTime fin1)
+        {
+            return View(servicio.BuscarFecha(inicio1,fin1));
+        }
+
+
     }
 }
